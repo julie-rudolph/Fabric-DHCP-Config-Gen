@@ -1,0 +1,54 @@
+{
+  "switch1": {
+    "Vlan415": {
+      "vlannum": "415",
+      "dhcploopaddr": "10.205.0.161"
+    },
+    "Vlan416": {
+      "vlannum": "416",
+      "dhcploopaddr": "10.205.0.193"
+    },
+    "Vlan417": {
+      "vlannum": "417",
+      "dhcploopaddr": "10.205.0.225"
+    },
+    "Vlan466": {
+      "vlannum": "466",
+      "dhcploopaddr": "10.204.0.65"
+    },
+    "Vlan467": {
+      "vlannum": "467",
+      "dhcploopaddr": "10.204.0.97"
+    },
+     "Vlan478": {
+      "vlannum": "478",
+      "dhcploopaddr": "10.205.3.33"
+    }
+  },
+  "switch2": {
+    "Vlan415": {
+      "vlannum": "415",
+      "dhcploopaddr": "10.205.0.162"
+    },
+    "Vlan416": {
+      "vlannum": "416",
+      "dhcploopaddr": "10.205.0.194"
+    },
+    "Vlan417": {
+      "vlannum": "417",
+      "dhcploopaddr": "10.205.0.226"
+    },
+    "Vlan466": {
+      "vlannum": "466",
+      "dhcploopaddr": "10.204.0.66"
+    },
+    "Vlan467": {
+      "vlannum": "467",
+      "dhcploopaddr": "10.204.0.98"
+    },
+     "Vlan478": {
+      "vlannum": "478",
+      "dhcploopaddr": "10.205.3.34"
+    }
+  }
+}

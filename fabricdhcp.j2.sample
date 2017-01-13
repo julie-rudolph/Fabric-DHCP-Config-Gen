@@ -1,0 +1,24 @@
+cli conf t
+	{% for vlans,vals in values.iteritems() %}
+           cli interface loopback{{ vals.vlannum }}
+              cli vrf member VXLAN-VRF-1
+			cli sleep 1
+          		cli ip address {{ vals.dhcploopaddr }}/32
+            		cli ip router ospf ZONE-1-DHCP-LOOPS area 204		
+              cli !
+		cli sleep 1
+  	cli interface vlan {{ vals.vlannum }}
+                        cli ip dhcp relay address 10.10.10.10
+			cli ip dhcp relay address 10.10.20.10
+                        cli ip dhcp relay source-int loopback{{ vals.vlannum }}
+		cli sleep 1
+	cli !
+	{% endfor %}
+		cli Router bgp 65412
+                        cli Vrf VXLAN-VRF-1
+                                    cli Address-family ipv4 unicast
+	{% for vlans,vals in values.iteritems() %}
+                                                cli Network {{ vals.dhcploopaddr }}/32
+	{% endfor %}
+	cli end
+
